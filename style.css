@@ -1,0 +1,47 @@
+:root {
+    --primary-color: #007bff; /* Màu xanh nước */
+    --secondary-color: #1a4e80; /* Màu xanh đậm cho Navbar */
+    --danger-color: #dc3545; /* Màu đỏ cảnh báo */
+    --success-color: #28a745; /* Màu xanh lá an toàn */
+}
+
+body {
+    background-color: #f4f7f6;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Style cho Navbar */
+.custom-navbar-bg {
+    background-color: var(--secondary-color) !important;
+}
+
+/* Style cho các nút quan trọng */
+.btn-danger {
+    background-color: var(--danger-color) !important;
+    border-color: var(--danger-color) !important;
+    font-weight: bold;
+}
+.data-card {
+    border-left: 5px solid var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.data-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Tùy chỉnh màu đường viền cho từng thẻ */
+.data-card-blue { border-left-color: var(--primary-color); }
+.data-card-info { border-left-color: #0dcaf0; } /* Bootstrap Info */
+.data-card-danger { border-left-color: var(--danger-color); }
+.data-card-warning { border-left-color: #ffc107; } /* Bootstrap Warning */
+
+/* Tùy chỉnh màu cho Tiêu đề (optional) */
+.text-secondary-color {
+    color: var(--secondary-color) !important;
+}
+.map-placeholder {
+    min-height: 500px;
+    background-color: #e9ecef; /* Màu nền xám nhạt */
+}

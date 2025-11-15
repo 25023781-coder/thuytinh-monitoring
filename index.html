@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hệ thống theo dõi Thuỷ Tinh</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark custom-navbar-bg shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">
+                <i class="fas fa-tint me-2"></i> RMaFWS
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Bảng điều khiển</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Bản đồ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Lịch sử</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-danger ms-lg-3 text-white" href="#"><i class="fas fa-exclamation-triangle me-2"></i> Cảnh báo</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container my-5">
+        <div class="row mb-4">
+            <div class="col-12">
+                <h1 class="display-5 fw-bold text-secondary-color">Bảng điều khiển Giám sát Thủy lợi</h1>
+                <p class="lead text-muted">Tổng quan tình hình mực nước và các cảnh báo lũ lụt mới nhất.</p>
+            </div>
+        </div>
+
+        <div class="alert alert-danger p-3 shadow-sm mb-5" role="alert">
+            <h4 class="alert-heading"><i class="fas fa-exclamation-circle me-3"></i> **CẢNH BÁO KHẨN CẤP!**</h4>
+            <p class="mb-0">Mực nước Sông Hương đã vượt mức Báo động 3. Cần di tản người dân tại khu vực hạ lưu ngay lập tức.</p>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-lg-3 col-md-6">
+                <div class="card p-3 shadow-sm border-0 h-100 data-card data-card-blue">
+                    <div class="d-flex align-items-center">
+                        <i class="fas fa-water fa-3x me-3 text-primary"></i>
+                        <div>
+                            <p class="text-uppercase fw-bold mb-0 text-muted">Mực nước TB (m)</p>
+                            <h2 class="display-6 fw-bold mb-0">2.80</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="card p-3 shadow-sm border-0 h-100 data-card data-card-info">
+                    <div class="d-flex align-items-center">
+                        <i class="fas fa-cloud-rain fa-3x me-3 text-info"></i>
+                        <div>
+                            <p class="text-uppercase fw-bold mb-0 text-muted">Lượng mưa 24h (mm)</p>
+                            <h2 class="display-6 fw-bold mb-0">150</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6">
+                <div class="card p-3 shadow-sm border-0 h-100 data-card data-card-danger">
+                    <div class="d-flex align-items-center">
+                        <i class="fas fa-exclamation-triangle fa-3x me-3 text-danger"></i>
+                        <div>
+                            <p class="text-uppercase fw-bold mb-0 text-muted">Trạm BĐ3</p>
+                            <h2 class="display-6 fw-bold mb-0">03</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="card p-3 shadow-sm border-0 h-100 data-card data-card-warning">
+                    <div class="d-flex align-items-center">
+                        <i class="fas fa-chart-line fa-3x me-3 text-warning"></i>
+                        <div>
+                            <p class="text-uppercase fw-bold mb-0 text-muted">Dự báo rủi ro</p>
+                            <h2 class="display-6 fw-bold mb-0 text-warning">Cao</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row mt-5">
+            <div class="col-lg-8 mb-4">
+                <div class="card shadow-sm border-0 h-100">
+                    <div class="card-header bg-white fw-bold border-0 pt-4">
+                        <i class="fas fa-map-marker-alt me-2"></i> **Chi tiết Mực nước Các Trạm**
+                    </div>
+                    <div class="card-body">
+                        <table class="table table-hover table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Trạm</th>
+                                    <th>Mực nước (m)</th>
+                                    <th>Cảnh báo</th>
+                                    <th>Thời gian</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Sông Cả (Hà Nội)</td>
+                                    <td class="text-success">1.20</td>
+                                    <td>An toàn</td>
+                                    <td>10:00</td>
+                                </tr>
+                                <tr>
+                                    <td>Sông Hương (Huế)</td>
+                                    <td class="text-danger fw-bold">4.80</td>
+                                    <td>Báo động 3</td>
+                                    <td>10:10</td>
+                                </tr>
+                                <tr>
+                                    <td>Hồ Trị An (Đồng Nai)</td>
+                                    <td class="text-warning">2.15</td>
+                                    <td>Báo động 1</td>
+                                    <td>10:05</td>
+                                </tr>
+                                <tr>
+                                    <td>Sông Hồng (Thái Bình)</td>
+                                    <td class="text-warning">3.50</td>
+                                    <td>Báo động 2</td>
+                                    <td>10:00</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+<div class="col-lg-4 mb-4">
+                <div class="card shadow-sm border-0 h-100">
+                    <div class="card-header bg-white fw-bold border-0 pt-4">
+                        <i class="fas fa-chart-line me-2"></i> **Xu hướng Mực nước 72h**
+                    </div>
+                    <div class="card-body">
+                        <div class="chart-area text-center py-5">
+                            <img src="https://via.placeholder.com/350x250/007bff/ffffff?text=Do+Thi+Muc+Nuoc" alt="Đồ thị xu hướng" class="img-fluid rounded">
+                            <p class="mt-3 text-muted small">Dữ liệu dự báo được cập nhật mỗi 15 phút.</p>
+                        </div>
+                        <div class="text-center mt-3">
+                            <button class="btn btn-sm btn-outline-primary">Tải dữ liệu (.CSV)</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <p class="mb-0">Hệ thống theo dõi Thủy tinh | &copy; 2024. Được cung cấp bởi Công nghệ Giám sát.</p>
+    </footer>
+    <div class="row mt-5">
+            <div class="col-12">
+                <h2 class="fw-bold text-secondary-color mb-3"><i class="fas fa-map-marked-alt me-2"></i> Bản đồ Giám sát Thời gian thực</h2>
+                <div class="card shadow-lg border-0 map-placeholder">
+                    <div class="card-body text-center p-5">
+                        <p class="lead text-muted mb-4">Bản đồ tương tác hiển thị vị trí các trạm và mức độ cảnh báo hiện tại.</p>
+                        <img src="https://via.placeholder.com/1000x500/e9ecef/000000?text=Khu+Vuc+Hien+Thi+Ban+Do" alt="Bản đồ Giám sát" class="img-fluid rounded">
+                        <button class="btn btn-outline-secondary mt-4">Xem chi tiết Bản đồ vệ tinh</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+<th>Trạm</th>
+<th>Mực nước (m)</th>
+<th>Cảnh báo</th>
+<th>Thời gian</th>
+<th>Chi tiết</th> ```
+<tr>
+                                    <td>Sông Hương (Huế)</td>
+                                    <td class="text-danger fw-bold">4.80</td>
+                                    <td>Báo động 3</td>
+                                    <td>10:10</td>
+                                    <td><button class="btn btn-sm btn-info text-white" data-bs-toggle="modal" data-bs-target="#stationModal"><i class="fas fa-eye"></i></button></td> </tr>
+                                    <div class="modal fade" id="stationModal" tabindex="-1" aria-labelledby="stationModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header bg-danger text-white">
+                <h5 class="modal-title" id="stationModalLabel">Thông tin chi tiết: Sông Hương (Huế)</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h4>Tình trạng Hiện tại</h4>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><strong>Mực nước:</strong> <span class="text-danger fw-bold">4.80 m</span></li>
+                            <li class="list-group-item"><strong>Ngưỡng BĐ3:</strong> 4.50 m</li>
+                            <li class="list-group-item"><strong>Xu hướng:</strong> <i class="fas fa-arrow-up text-danger me-1"></i> Tăng (0.1m/giờ)</li>
+                            <li class="list-group-item"><strong>Dự báo 6h:</strong> 4.95 m</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <h4>Hình ảnh Trạm</h4>
+                        <img src="https://via.placeholder.com/400x250/212529/ffffff?text=Hinh+Anh+Camera+Tram" alt="Camera Trạm" class="img-fluid rounded shadow-sm">
+                        <p class="text-muted small mt-2">Nguồn: Camera giám sát Trạm X.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                <button type="button" class="btn btn-danger"><i class="fas fa-phone-alt me-1"></i> Liên hệ khẩn cấp</button>
+            </div>
+        </div>
+    </div>
+</div>
